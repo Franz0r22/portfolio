@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/dde853c53c.js" crossorigin="anonymous"></script>
+  <title>Document</title>
+</head>
+<body>
+  <nav id="navbar">
+    <div id="hamburger-btn" class="hamburger">
+      <span class="hamburger__top-bun"></span>
+      <span class="hamburger__bottom-bun"></span>
+    </div>
+    <ul class="list">
+      <li><a href="#welcome-section" class="nav-link">Inicio</a></li>
+      <li><a href="#projects" class="nav-link">Proyectos</a></li>
+      <li><a href="#about" class="nav-link">Sobre Mi</a></li>
+      <li><a href="#contact" class="nav-link">Contacto</a></li>
+    </ul>
+  </nav>
+  <main class="container">
+    <section id="welcome-section" class="section">
+      <div class="name">
+        <h1 class="welcome-text">Hola, ¡hagamos algo grandioso!</h1>
+        <a href="#contact"><img src="https://www.flaticon.com/svg/static/icons/svg/2317/2317963.svg" alt="developer icon" class="img"></a>
+      </div>
+    </section>
+    <section id="projects" class="section-projects">
+      <h1 class="project-title">Proyectos Recientes</h1>
+      <div class="project-tile">
+        <div class="thumbnails"><a href="https://franz0r22.github.io/tracking-component/" target="_blank">
+          <img  class="img-project" src="./img/tn3.PNG" alt="Projecto tres"></a><p class="text-project">Responsive Layout - SASS</p></div>        
+        <div class="thumbnails"><a href="https://franz0r22.github.io/sign-in/" target="_blank">
+          <img  class="img-project" src="./img/tn2.PNG" alt="Projecto dos"></a><p class="text-project">Client Side Validation JS</p></div>
+        <div class="thumbnails"><a href="https://franz0r22.github.io/Dashboard-Dark-mode/" target="_blank">
+          <img  class="img-project" src="./img/tn5.PNG" alt="Projecto cinco"></a><p class="text-project">Dashboard - Dark Mode Switch</p></div> 
+        <div class="thumbnails"><a href="https://franz0r22.github.io/encuesta/" target="_blank">
+          <img  class="img-project" src="./img/tn4.PNG" alt="Projecto cuatro"></a><p class="text-project">Satisfaction Survey</p></div>
+        <div class="thumbnails"><a href="https://franz0r22.github.io/slider-challenge/" target="_blank">
+          <img  class="img-project" src="./img/tn6.PNG" alt="Projecto seis"></a><p class="text-project">Testimonials Slider</p></div>
+        <div class="thumbnails"><a href="https://franz0r22.github.io/Tribute-page/" target="_blank">
+          <img  class="img-project" src="./img/tn1.PNG" alt="Projecto uno"></a><p class="text-project">Tribute Page</p></div>
+      </div>
+        <p class="info-text">Más información sobre ellos click <a id="profile-link" href="https://github.com/Franz0r22" target="_blank">aquí</a></p>
+    </section>
+    <section id="about" class="section">
+        <h1>Sobre Mi</h1>
+          <p>Mi nombre es Francisco Dávila, un desarrollador web dedicado al front-end. Me especializo en crear
+             Aplicaciones web de tipo SPA usando React como framework.
+          </p> 
+    </section>
+    <section id="contact" class="section-contact">
+      <h1>Contáctame</h1>
+        <div class="contacto">
+          <figure><img class="icons" src="https://www.flaticon.com/svg/static/icons/svg/942/942196.svg" alt="">
+            <figcaption>Mail</figcaption>
+          </figure>
+          <figure><img class="icons"src="https://www.flaticon.com/svg/static/icons/svg/1384/1384063.svg" alt="">
+            <figcaption>Instagram</figcaption>
+          </figure>
+          <figure><img class="icons"src="https://www.flaticon.com/svg/static/icons/svg/733/733585.svg" alt="">
+            <figcaption>WhatsApp</figcaption>
+          </figure>
+        </div>
+    </section>
+    <footer>
+      <p>
+        &copy; 2020 Creado por Francisco Dávila
+      </p>
+    </footer>
+  </main>
+<script src="main.js"></script>
+</body>
+</html>
