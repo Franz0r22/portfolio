@@ -10,8 +10,10 @@
 body {
    margin: 0;
    font-family: 'Nunito', sans-serif;
-   background-color:whitesmoke;
+   background-image: linear-gradient(135deg, var(--welcome-color)50%, var(--main-ink) 50%);
+   background-attachment: fixed;
  }
+
 /*Navigation Bar*/
 #navbar {
    position: fixed;
@@ -41,6 +43,7 @@ body {
   border: 2px solid var(--active-color);
   border-radius: 20px;
 }
+
 /*welcome section*/
 .section {
   display: flex;
@@ -52,22 +55,6 @@ body {
   height: 100vh;
   color: black;
   font-size: 2rem;
-  background-image: linear-gradient(45deg, var(--welcome-color) 50%, var(--main-blue) 50%);
-}
-.welcome-text {
-  animation-duration: 2s;
-  animation-name: slidein;
-}
-/*Project Section*/
-.section-projects {
-  display: grid;
-  text-align: center;
-  align-items: center;
-  align-self: center;
-  width: 100%;
-  height: 100vh;
-  font-size: 2rem;
-  background-image: linear-gradient(135deg, var(--welcome-color)50%, var(--main-ink) 50%);
 }
 .img {
   display: block;
@@ -83,24 +70,32 @@ body {
   width: 9em;
   box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.3);
 }
-.project-tile {
-  margin: -0.5em 1em;
+
+/*Project Section*/
+.section-projects {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  padding: 2rem;
+  font-size: 2rem;
+}
+.project-tile {
+  margin: 0 1em;
+  display: grid;
+  grid-template-columns: 0.7fr 0.7fr 0.7fr;
+  align-items: center;
   gap: 1em;
-  /*border: 1px solid red;*/
  }
  .img-project {
    display: flex;
    flex-direction: column;
    width: 100%;
    height: 7em;
-   object-fit: cover;
    -webkit-transform: scale(1);
    transform: scale(1);
    -webkit-transition: .3s ease-in-out;
    transition: .3s ease-in-out;
-   z-index: -3;
  }
  .img-project:hover {
   -webkit-transform: scale(0.7);
@@ -112,13 +107,10 @@ body {
    font-size: 0.65em;
    color: var(--active-color);
  }
- .project-title {
-   margin-top: 1em;
- }
 .info-text {
   margin-top: 2em;
   font-size: 0.65em;
-  color:white;
+  color: var(--main-blue);
 }
 #profile-link {
   color: var(--active-color);
@@ -127,6 +119,7 @@ body {
 .thumbnails {
   box-shadow: 3px 3px 15px 4px rgba(0, 0, 0, 0.4);
 }
+
 /*Contact Me Section*/
 .section-contact {
   display: flex;
@@ -134,9 +127,9 @@ body {
   justify-content: center;
   text-align: center;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   font-size: 2rem;
-  background-image: linear-gradient(135deg, var(--welcome-color)50%, var(--main-ink) 50%);
+  
 }
 .icons {
   cursor: pointer;
@@ -159,19 +152,8 @@ footer {
   background-color: black;
   color: white;
 }
-/*Keyframes for welcome text*/
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%
-  }
 
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
-/*Responsive text, navbar and tiles*/
+/*Responsive text, navbar and tile*/
 @media screen and (max-width: 1024px) {
   .project-tile {
     grid-template-columns: 1fr 1fr;
@@ -182,14 +164,12 @@ footer {
   .section, .section-projects, .section-contact {
      font-size: 1.5em;
      padding-bottom: 1em;
-     padding-bottom: 1em;
    }
-
-   .name {
+  .name {
      margin-top: 7em;
    }
 }
-/*Hamburger button*/
+/*Hamburger button Snippet Thanks to CSS-TRICKS*/
  @media screen and (max-width: 780px) {
   .nav-link {
     font-size: 1em;
@@ -338,11 +318,7 @@ footer {
     grid-template-columns: 1fr;
     margin-top: 1em;
   }
-  .img-project {
-    height: 10em;
-  }
   .section-projects {
-    padding-bottom: 43em;
     font-size: 1.3em;
   }
   .contacto {
@@ -353,5 +329,4 @@ footer {
   .list {
     padding-top: 2em;
   }
-
 }
